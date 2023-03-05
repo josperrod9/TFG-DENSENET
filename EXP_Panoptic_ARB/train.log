@@ -1,0 +1,186 @@
+2023-02-18 17:31:06,621:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:31:06,622:INFO: Create Model ...
+2023-02-18 17:31:11,192:INFO: Total images in training data is 11853
+2023-02-18 17:31:11,192:INFO: Total images in validation data is 1482
+2023-02-18 17:31:11,192:INFO: Total images in testing data is 1482
+2023-02-18 17:31:11,214:INFO: 
+Start training ===========================================>
+2023-02-18 17:31:11,214:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:31:11,215:INFO: Epoch[1/5] ==============>
+2023-02-18 17:32:30,925:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:32:30,925:INFO: Create Model ...
+2023-02-18 17:32:34,447:INFO: Total images in training data is 11853
+2023-02-18 17:32:34,453:INFO: Total images in validation data is 1482
+2023-02-18 17:32:34,453:INFO: Total images in testing data is 1482
+2023-02-18 17:32:34,480:INFO: 
+Start training ===========================================>
+2023-02-18 17:32:34,480:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:32:34,480:INFO: Epoch[1/5] ==============>
+2023-02-18 17:33:58,666:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:33:58,666:INFO: Create Model ...
+2023-02-18 17:34:01,874:INFO: Total images in training data is 11853
+2023-02-18 17:34:01,874:INFO: Total images in validation data is 1482
+2023-02-18 17:34:01,874:INFO: Total images in testing data is 1482
+2023-02-18 17:34:01,900:INFO: 
+Start training ===========================================>
+2023-02-18 17:34:01,900:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:34:01,901:INFO: Epoch[1/5] ==============>
+2023-02-18 17:35:12,191:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:35:12,192:INFO: Create Model ...
+2023-02-18 17:35:15,570:INFO: Total images in training data is 11853
+2023-02-18 17:35:15,570:INFO: Total images in validation data is 1482
+2023-02-18 17:35:15,571:INFO: Total images in testing data is 1482
+2023-02-18 17:35:15,592:INFO: 
+Start training ===========================================>
+2023-02-18 17:35:15,593:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:35:15,593:INFO: Epoch[1/5] ==============>
+2023-02-18 17:36:55,981:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:36:55,982:INFO: Create Model ...
+2023-02-18 17:36:59,423:INFO: Total images in training data is 11853
+2023-02-18 17:36:59,423:INFO: Total images in validation data is 1482
+2023-02-18 17:36:59,424:INFO: Total images in testing data is 1482
+2023-02-18 17:36:59,447:INFO: 
+Start training ===========================================>
+2023-02-18 17:36:59,448:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:36:59,448:INFO: Epoch[1/5] ==============>
+2023-02-18 17:39:56,535:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:39:56,535:INFO: Create Model ...
+2023-02-18 17:39:59,838:INFO: Total images in training data is 11853
+2023-02-18 17:39:59,838:INFO: Total images in validation data is 1482
+2023-02-18 17:39:59,839:INFO: Total images in testing data is 1482
+2023-02-18 17:39:59,861:INFO: 
+Start training ===========================================>
+2023-02-18 17:39:59,862:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:39:59,862:INFO: Epoch[1/5] ==============>
+2023-02-18 17:40:27,419:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:40:27,419:INFO: Create Model ...
+2023-02-18 17:40:30,506:INFO: Total images in training data is 11853
+2023-02-18 17:40:30,507:INFO: Total images in validation data is 1482
+2023-02-18 17:40:30,507:INFO: Total images in testing data is 1482
+2023-02-18 17:40:30,532:INFO: 
+Start training ===========================================>
+2023-02-18 17:40:30,533:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:40:30,533:INFO: Epoch[1/5] ==============>
+2023-02-18 17:49:56,132:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:49:56,132:INFO: Create Model ...
+2023-02-18 17:49:59,324:INFO: Total images in training data is 11853
+2023-02-18 17:49:59,325:INFO: Total images in validation data is 1482
+2023-02-18 17:49:59,325:INFO: Total images in testing data is 1482
+2023-02-18 17:49:59,349:INFO: 
+Start training ===========================================>
+2023-02-18 17:49:59,349:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:49:59,349:INFO: Epoch[1/5] ==============>
+2023-02-18 17:50:36,643:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:50:36,643:INFO: Create Model ...
+2023-02-18 17:50:39,972:INFO: Total images in training data is 11853
+2023-02-18 17:50:39,972:INFO: Total images in validation data is 1482
+2023-02-18 17:50:39,973:INFO: Total images in testing data is 1482
+2023-02-18 17:50:39,997:INFO: 
+Start training ===========================================>
+2023-02-18 17:50:39,998:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:50:39,998:INFO: Epoch[1/5] ==============>
+2023-02-18 17:53:28,877:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:53:28,877:INFO: Create Model ...
+2023-02-18 17:53:32,020:INFO: Total images in training data is 11853
+2023-02-18 17:53:32,021:INFO: Total images in validation data is 1482
+2023-02-18 17:53:32,021:INFO: Total images in testing data is 1482
+2023-02-18 17:53:32,051:INFO: 
+Start training ===========================================>
+2023-02-18 17:53:32,051:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:53:32,052:INFO: Epoch[1/5] ==============>
+2023-02-18 17:54:00,488:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-02-18 17:54:00,488:INFO: Create Model ...
+2023-02-18 17:54:03,581:INFO: Total images in training data is 11853
+2023-02-18 17:54:03,581:INFO: Total images in validation data is 1482
+2023-02-18 17:54:03,582:INFO: Total images in testing data is 1482
+2023-02-18 17:54:03,607:INFO: 
+Start training ===========================================>
+2023-02-18 17:54:03,608:INFO: Initial learning Rate: 0.0001
+2023-02-18 17:54:03,609:INFO: Epoch[1/5] ==============>
+2023-03-02 18:04:42,238:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:04:42,239:INFO: Create Model ...
+2023-03-02 18:04:47,891:INFO: Total images in training data is 11853
+2023-03-02 18:04:47,893:INFO: Total images in validation data is 1482
+2023-03-02 18:04:47,894:INFO: Total images in testing data is 1482
+2023-03-02 18:04:47,925:INFO: 
+Start training ===========================================>
+2023-03-02 18:04:47,926:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:04:47,926:INFO: Epoch[1/5] ==============>
+2023-03-02 18:05:15,037:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:05:15,037:INFO: Create Model ...
+2023-03-02 18:05:19,334:INFO: Total images in training data is 11853
+2023-03-02 18:05:19,335:INFO: Total images in validation data is 1482
+2023-03-02 18:05:19,335:INFO: Total images in testing data is 1482
+2023-03-02 18:05:19,362:INFO: 
+Start training ===========================================>
+2023-03-02 18:05:19,363:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:05:19,363:INFO: Epoch[1/5] ==============>
+2023-03-02 18:05:28,372:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:05:28,373:INFO: Create Model ...
+2023-03-02 18:05:30,013:INFO: Total images in training data is 11853
+2023-03-02 18:05:30,013:INFO: Total images in validation data is 1482
+2023-03-02 18:05:30,014:INFO: Total images in testing data is 1482
+2023-03-02 18:05:30,040:INFO: 
+Start training ===========================================>
+2023-03-02 18:05:30,041:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:05:30,042:INFO: Epoch[1/5] ==============>
+2023-03-02 18:07:45,627:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:07:45,628:INFO: Create Model ...
+2023-03-02 18:07:47,191:INFO: Total images in training data is 11853
+2023-03-02 18:07:47,191:INFO: Total images in validation data is 1482
+2023-03-02 18:07:47,192:INFO: Total images in testing data is 1482
+2023-03-02 18:07:47,217:INFO: 
+Start training ===========================================>
+2023-03-02 18:07:47,218:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:07:47,218:INFO: Epoch[1/5] ==============>
+2023-03-02 18:09:24,525:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:09:24,526:INFO: Create Model ...
+2023-03-02 18:09:26,105:INFO: Total images in training data is 11853
+2023-03-02 18:09:26,105:INFO: Total images in validation data is 1482
+2023-03-02 18:09:26,105:INFO: Total images in testing data is 1482
+2023-03-02 18:09:26,131:INFO: 
+Start training ===========================================>
+2023-03-02 18:09:26,132:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:09:26,133:INFO: Epoch[1/5] ==============>
+2023-03-02 18:12:44,086:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:12:44,086:INFO: Create Model ...
+2023-03-02 18:12:45,678:INFO: Total images in training data is 11853
+2023-03-02 18:12:45,678:INFO: Total images in validation data is 1482
+2023-03-02 18:12:45,679:INFO: Total images in testing data is 1482
+2023-03-02 18:12:45,702:INFO: 
+Start training ===========================================>
+2023-03-02 18:12:45,702:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:12:45,703:INFO: Epoch[1/5] ==============>
+2023-03-02 18:14:01,401:INFO: STEP: 0  LOSS 8.897006034851074
+2023-03-02 18:27:53,211:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 18:27:53,212:INFO: Create Model ...
+2023-03-02 18:27:54,791:INFO: Total images in training data is 11853
+2023-03-02 18:27:54,792:INFO: Total images in validation data is 1482
+2023-03-02 18:27:54,792:INFO: Total images in testing data is 1482
+2023-03-02 18:27:54,815:INFO: 
+Start training ===========================================>
+2023-03-02 18:27:54,816:INFO: Initial learning Rate: 0.0001
+2023-03-02 18:27:54,816:INFO: Epoch[1/5] ==============>
+2023-03-02 18:29:18,978:INFO: STEP: 0  LOSS 7.80734920501709
+2023-03-02 20:47:49,492:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 20:47:49,493:INFO: Create Model ...
+2023-03-02 20:47:51,226:INFO: Total images in training data is 11853
+2023-03-02 20:47:51,226:INFO: Total images in validation data is 1482
+2023-03-02 20:47:51,226:INFO: Total images in testing data is 1482
+2023-03-02 20:47:51,255:INFO: 
+Start training ===========================================>
+2023-03-02 20:47:51,256:INFO: Initial learning Rate: 0.0001
+2023-03-02 20:47:51,256:INFO: Epoch[1/5] ==============>
+2023-03-02 20:48:32,692:INFO: ************** Experiment Name: EXP_Panoptic_ARB **************
+2023-03-02 20:48:32,692:INFO: Create Model ...
+2023-03-02 20:48:34,334:INFO: Total images in training data is 11853
+2023-03-02 20:48:34,335:INFO: Total images in validation data is 1482
+2023-03-02 20:48:34,335:INFO: Total images in testing data is 1482
+2023-03-02 20:48:34,357:INFO: 
+Start training ===========================================>
+2023-03-02 20:48:34,358:INFO: Initial learning Rate: 0.0001
+2023-03-02 20:48:34,358:INFO: Epoch[1/5] ==============>
+2023-03-02 20:49:48,257:INFO: STEP: 0  LOSS 7.417374610900879
+2023-03-02 20:51:02,913:INFO: STEP: 1  LOSS 7.979221820831299
+2023-03-02 20:52:16,678:INFO: STEP: 2  LOSS 8.223825454711914
+2023-03-02 20:53:31,458:INFO: STEP: 3  LOSS 7.509128570556641

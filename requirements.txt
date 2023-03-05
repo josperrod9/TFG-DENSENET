@@ -1,0 +1,7 @@
+matplotlib==3.3.4
+tensorboard==2.4.1
+tensorboard-logger==0.1.0
+tensorboard-plugin-wit==1.8.0
+torch==1.7.1+cu101
+torchvision==0.8.2+cu101
+
