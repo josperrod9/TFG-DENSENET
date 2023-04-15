@@ -1,8 +1,5 @@
 # Attention-A-Lightweight-2D-Hand-Pose-Estimation-Approach-Pytorch
 
-#### Mision
-**Attention! A Lightweight 2D Hand Pose Estimation Approach**  Attention Augmented Inverted Bottleneck Block。
-
 #### Enviroment
 
 - Ubuntu 16.04.6 LTS
