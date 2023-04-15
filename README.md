@@ -30,4 +30,3 @@
 
 [7] Shivakumar S H, Oberweger M, Rad M, et al. HO-3D: A Multi-User, Multi-Object Dataset for Joint 3D Hand-Object Pose Estimation[J]. arXiv. org e-Print archive, 2019. [HO3D_v2]
 
-"# TFG-DENSENET" 
