@@ -1,7 +1,7 @@
 # Attention-A-Lightweight-2D-Hand-Pose-Estimation-Approach-Pytorch
 
 #### Mision
-在手部关键点检测任务中，使用论文 **Attention! A Lightweight 2D Hand Pose Estimation Approach**  Attention Augmented Inverted Bottleneck Block。
+**Attention! A Lightweight 2D Hand Pose Estimation Approach**  Attention Augmented Inverted Bottleneck Block。
 
 #### Enviroment
 
