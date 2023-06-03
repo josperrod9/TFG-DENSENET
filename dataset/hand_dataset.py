@@ -7,25 +7,6 @@ import json
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
-parts = [
-    [0, 1], [1, 2], [2, 3], [3, 4],
-    [0, 5], [5, 6], [6, 7], [7, 8],
-    [0, 9], [9, 10], [10, 11], [11, 12],
-    [0, 13], [13, 14], [14, 15], [15, 16],
-    [0, 17], [17, 18], [18, 19], [19, 20]
-]
-
-
-groups6 = [
-    [1, 2, 3], [5, 6, 7], [9, 10, 11], [13, 14, 15], [17, 18, 19], [0, 4, 8, 12, 16],
-]
-
-groups1 = [
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-]
-
-
 class HandDataset(Dataset):
     def __init__(self, data_root, mode='train'):
         self.img_size = 224
@@ -46,7 +27,6 @@ class HandDataset(Dataset):
         # ********************** get image **********************
         im = Image.open(os.path.join(self.data_root, 'imgs', img_name))
         w, h = im.size
-
         im = im.resize((self.img_size, self.img_size))
 
         image = transforms.ToTensor()(im)
@@ -59,7 +39,6 @@ class HandDataset(Dataset):
         label = np.asarray(img_label)  # 21 * 2
         label[:, 0] = label[:, 0] / w
         label[:, 1] = label[:, 1] / h
-
         return image, label, img_name, w, h
 
 

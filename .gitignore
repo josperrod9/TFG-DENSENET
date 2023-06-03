@@ -1,0 +1,5 @@
+# Archivos de caché
+**/__pycache__/
+**/*.pyc
+# Entorno virtual
+densenet/

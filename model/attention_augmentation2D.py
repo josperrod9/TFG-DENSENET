@@ -8,7 +8,7 @@ device = torch.device("cuda" if use_cuda else "cpu")
 
 # https://github.com/leaderj1001/Attention-Augmented-Conv2d/blob/1ce94a3072c2d9aabe258313b3a17c974d987411/attention_augmented_conv.py
 class AugmentedConv(nn.Module):
-    def __init__(self, in_channels, out_channels, kernel_size, dk, dv, Nh, shape=0, relative=False, stride=1):
+    def __init__(self, in_channels, out_channels, kernel_size, dk, dv, Nh, shape=0, relative=True, stride=1):
         super(AugmentedConv, self).__init__()
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -59,8 +59,8 @@ class AugmentedConv(nn.Module):
         logits = torch.matmul(flat_q.transpose(2, 3), flat_k)
         if self.relative:
             h_rel_logits, w_rel_logits = self.relative_logits(q)
-            logits += h_rel_logits
-            logits += w_rel_logits
+            logits = logits + h_rel_logits
+            logits = logits + w_rel_logits
         weights = F.softmax(logits, dim=-1)
 
         # attn_out
@@ -82,7 +82,7 @@ class AugmentedConv(nn.Module):
         v = self.split_heads_2d(v, Nh)
 
         dkh = dk // Nh
-        q *= dkh ** -0.5
+        q = q * (dkh ** -0.5)
         flat_q = torch.reshape(q, (N, Nh, dk // Nh, H * W))
         flat_k = torch.reshape(k, (N, Nh, dk // Nh, H * W))
         flat_v = torch.reshape(v, (N, Nh, dv // Nh, H * W))
@@ -137,18 +137,3 @@ class AugmentedConv(nn.Module):
         final_x = torch.reshape(flat_x_padded, (B, Nh, L + 1, 2 * L - 1))
         final_x = final_x[:, :, :L, L - 1:]
         return final_x
-
-
-# Example Code
-# tmp = torch.randn((16, 3, 32, 32)).to(device)
-# augmented_conv1 = AugmentedConv(in_channels=3, out_channels=20, kernel_size=3, dk=40, dv=4, Nh=4, relative=True, padding=1, stride=2, shape=16).to(device)
-# conv_out1 = augmented_conv1(tmp)
-# print(conv_out1.shape)
-#
-# for name, param in augmented_conv1.named_parameters():
-#     print('parameter name: ', name)
-#
-# augmented_conv2 = AugmentedConv(in_channels=3, out_channels=20, kernel_size=3, dk=40, dv=4, Nh=4, relative=True, padding=1, stride=1, shape=32).to(device)
-# conv_out2 = augmented_conv2(tmp)
-# print(conv_out2.shape)
-
