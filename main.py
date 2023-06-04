@@ -116,7 +116,6 @@ def train(model):
     logger.info('\nStart training ===========================================>')
     best_epo = -1
     max_pck = -1
-    cur_lr = learning_rate
     logger.info('Initial learning Rate: {}'.format(learning_rate))
 
     for epoch in range(1, epochs + 1):
@@ -156,6 +155,7 @@ def train(model):
         # *************** save current model and best model ***************
         if cur_pck > max_pck:
             torch.save(model.state_dict(), os.path.join(save_dir, 'best_model.pth'))
+            torch.save(optimizer.state_dict(),  os.path.join(save_dir,'best_optimizador.pth'))
             best_epo = epoch
             max_pck = cur_pck
         logger.info('Current Best EPOCH is : {}, PCK is : {}\n**************\n'.format(best_epo, max_pck))
