@@ -1,17 +1,45 @@
-# Attention-A-Lightweight-2D-Hand-Pose-Estimation-Approach-Pytorch
+# 2D-Hand-Pose-Estimation-Pytorch
 
-#### Enviroment
+## Description
+This project aims to develop an artificial intelligence system that can estimate hand pose from 2D images. The system utilizes deep learning techniques to accurately detect and predict the position and orientation of a hand in an image.
 
-- Ubuntu 16.04.6 LTS
-- Python 3.9.1
-- Cuda 10.1
-- Download the pre-processed dataset according to: https://github.com/HowieMa/NSRMhand. 
-    ```
-    mv path/to/CMUhand.tar ./
-    tar -xvf CMUhand.tar
-    ```
+## Requirements
+Python 3.8.1 (recommended)
 
-#### Reference
+Virtual environment (recommended)
+
+## Installation
+1. Create a virtual environment:
+```bash
+python -m venv myenv
+```
+2. Activate the virtual environment:
+```bash
+source myenv/bin/activate  # for Unix-based systems
+```
+```bash
+myenv\Scripts\activate    # for Windows
+```
+3. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Usage
+
+To train or test the network, you have two options:
+
+Use the Jupyter notebook [TFG_Training.ipynb](TFG_Training.ipynb) for training or testing the hand pose estimation model.
+
+Alternatively, you can run the [main.py](main.py) script to perform training or testing directly from the command line.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any questions or inquiries, please contact [josperrod9](https://github.com/josperrod9).
+
+## References
+List any references, papers, or resources related to the project.
 
 [1] Santavas N, Kansizoglou I, Bampis L, et al. Attention! a lightweight 2d hand pose estimation approach[J]. IEEE Sensors Journal, 2020. [[code]][https://github.com/nsantavas/Attention-A-Lightweight-2D-Hand-Pose-Estimation-Approach]
 
