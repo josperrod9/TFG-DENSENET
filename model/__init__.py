@@ -32,8 +32,23 @@ class DepthwiseConv2d(nn.Conv2d):
             bias=bias,
             padding_mode=padding_mode
         )
-
+            
 def aug_block(in_channels, out_channels, kernel_size, dk,dv, Nh, shape):
+    """
+        Creates an augmented convolution block with the specified parameters.
+
+        Args:
+            in_channels (int): Number of input channels.
+            out_channels (int): Number of output channels.
+            kernel_size (int): Size of the convolution kernel.
+            dk (float): Scaling factor for the keys.
+            dv (float): Scaling factor for the values.
+            Nh (int): Number of attention heads.
+            shape (int): Spatial dimension of the input tensor.
+
+        Returns:
+            nn.Sequential: Augmented convolution block with batch normalization and Mish activation.
+    """
     return nn.Sequential(
             AugmentedConv(in_channels=in_channels, out_channels=out_channels, kernel_size=kernel_size, dk=dk,
                           dv=dv, Nh=Nh, relative=True, stride=1, shape=shape),
@@ -41,8 +56,37 @@ def aug_block(in_channels, out_channels, kernel_size, dk,dv, Nh, shape):
             Mish()
         )
 
-# torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True, padding_mode='zeros')
 class ARB(nn.Module):
+    """
+    An attention residual block used in a neural network for image processing tasks.
+
+    Args:
+        in_channels (int): The number of input channels.
+        out_channels (int): The number of output channels.
+        kernel_size (int): The size of the convolutional kernel.
+        aug (bool, optional): Whether to use the augmentation block. Defaults to True.
+        dk (float, optional): The drop rate for the key. Defaults to 0.1.
+        dv (float, optional): The drop rate for the value. Defaults to 0.1.
+        Nh (int, optional): The number of attention heads. Defaults to 4.
+        shape (int, optional): The shape of the input image. Defaults to 224.
+
+    Attributes:
+        kernel_size (int): The size of the convolutional kernel.
+        conv1 (nn.Sequential): A sequence of convolutional layers.
+        aug (bool): Whether to use the augmentation block.
+        attention_aug (aug_block): An augmentation block for attention.
+        conv2 (nn.Sequential): A sequence of convolutional layers.
+
+    Methods:
+        forward(inputs): Performs a forward pass of the attention residual block.
+
+    Example:
+        >>> arb = ARB(64, 64, 3)
+        >>> x = torch.randn(1, 64, 224, 224)
+        >>> y = arb(x)
+        >>> y.shape
+        torch.Size([1, 64, 224, 224])
+    """
     def __init__(self, in_channels, out_channels, kernel_size, aug=True, dk=0.1, dv=0.1, Nh=4, shape = 224):
         super(ARB, self).__init__()
         self.kernel_size = kernel_size
@@ -74,6 +118,31 @@ class ARB(nn.Module):
         return x
 
 class Dense(nn.Module):
+    """
+    A dense block that concatenates the output of multiple ARB blocks.
+
+    Args:
+        in_channels (int): The number of input channels.
+        growth_rate (int): The number of output channels for each ARB block.
+        kernel_size (int): The size of the convolutional kernel in each ARB block.
+        iteration (int): The number of ARB blocks to concatenate.
+        Nh (int): The number of attention heads in the attention block.
+        aug (bool): Whether to use attention augmentation in the ARB blocks.
+        shape (int): The spatial dimensions of the input tensor.
+
+    Attributes:
+        arb (nn.ModuleList): A list of ARB blocks to concatenate.
+
+    Methods:
+        forward(inputs): Performs a forward pass of the dense block.
+
+    Example:
+        >>> dense = Dense(64, 32, 3, 4)
+        >>> x = torch.randn(1, 64, 32, 32)
+        >>> y = dense(x)
+        >>> y.shape
+        torch.Size([1, 256, 32, 32])
+    """
     def __init__(self, in_channels, growth_rate, kernel_size, iteration, Nh=4, aug=True, shape = 224):
         super(Dense, self).__init__()
         self.iteration = iteration
@@ -93,6 +162,28 @@ class Dense(nn.Module):
 
 
 class Transition(nn.Module):
+    """
+    A transition block that reduces the spatial dimensions of the input tensor.
+
+    Args:
+        in_channels (int): The number of input channels.
+        out_channels (int): The number of output channels.
+
+    Attributes:
+        conv (nn.Conv2d): A 2D convolutional layer that reduces the number of channels.
+        activation (BlurPool): A BlurPool layer that reduces the spatial dimensions of the tensor.
+        batch_normalization (nn.BatchNorm2d): A batch normalization layer that normalizes the tensor.
+
+    Methods:
+        forward(inputs): Performs a forward pass of the transition block.
+
+    Example:
+        >>> transition = Transition(64, 32)
+        >>> x = torch.randn(1, 64, 32, 32)
+        >>> y = transition(x)
+        >>> y.shape
+        torch.Size([1, 32, 16, 16])
+    """
     def __init__(self, in_channels, out_channels):
         super(Transition, self).__init__()
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=1)
@@ -107,6 +198,31 @@ class Transition(nn.Module):
 
 
 class light_Model(nn.Module):
+    """
+    A light model implementation using DenseNet architecture.
+
+    Args:
+        conf (dict): Configuration parameters for the model.
+
+    Attributes:
+        dense1 - dense8 (Dense): Dense blocks of the DenseNet model.
+        transition1 - transition7 (Transition): Transition blocks that reduce the spatial dimensions.
+        aug_block (aug_block): Augmentation block.
+        avg_pool (nn.AvgPool2d): Average pooling layer.
+        conv (nn.Conv2d): Convolutional layer.
+        relu (nn.ReLU): ReLU activation function.
+
+    Methods:
+        forward(inputs): Performs a forward pass of the light model.
+
+    Example:
+        >>> conf = {"param1": value1, "param2": value2}
+        >>> model = light_Model(conf)
+        >>> inputs = torch.randn(1, 3, 224, 224)
+        >>> outputs = model.forward(inputs)
+        >>> outputs.shape
+        torch.Size([1, 21, 2])
+    """
     def __init__(self, conf):
         super(light_Model, self).__init__()
         global config
