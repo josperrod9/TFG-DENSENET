@@ -32,9 +32,6 @@ Use the Jupyter notebook [TFG_Training.ipynb](TFG_Training.ipynb) for training o
 
 Alternatively, you can run the [main.py](main.py) script to perform training or testing directly from the command line.
 
-## License
-This project is licensed under the MIT License.
-
 ## Contact
 For any questions or inquiries, please contact [josperrod9](https://github.com/josperrod9).
 
